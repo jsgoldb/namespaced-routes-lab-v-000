@@ -1,0 +1,10 @@
+<h1>Choose Your Settings:</h1>
+<%= form_for @preference, url: admin_settings_path, method: 'post' do |f|%>
+  <%= f.label :song_sort_order %>
+  <%= f.check_box(:song_sort_order,{:id => "desc", :value => "DESC"}) %>
+  <%= f.check_box(:song_sort_order,{:id => "asc", :value => "ASC"}) %>
+  <%= f.label :artist_sort_order %>
+  <%= f.check_box(:artist_sort_order,{:id => "desc", :value => "DESC"}) %>
+  <%= f.check_box(:artist_sort_order,{:id => "asc", :value => "ASC"}) %>
+  <%= f.submit %> 
+<% end %>
